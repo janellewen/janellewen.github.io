@@ -1,0 +1,358 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Fonts */
+
+@font-face {
+    font-family: Opulent;
+    src: url(/Font/Opulent/OPN.TTF);
+}
+
+@font-face {
+    font-family: Univers;
+    src: url(/Font/Univers\ Std/UniversLTStd.otf);
+}
+
+@font-face {
+    font-family: Univers;
+    src: url(/Font/Univers\ Std/UniversLTStd-Bold.otf);
+    font-weight: bold;
+}
+
+/* Format */
+
+.main {
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: Opulent, sans-serif;
+    font-size: 36px;
+}
+
+h2 {
+    font-family: Opulent, sans-serif;
+    font-size: 21px;
+}
+
+h3 {
+    font-family: Univers, sans-serif;
+    font-size: 21px;
+    font-weight: normal;
+}
+
+h4 {
+    font-family: Opulent, sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #C95959;
+}
+
+p {
+    font-family: Univers;
+}
+
+#top-labels {
+    font-family: Univers;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 20px 0px 8px 0px;
+}
+
+#asterisk {
+    color: red;
+}
+
+button {
+    margin: 20px 0px;
+    padding: 0px 20px;
+    min-width: 250px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    font-family: Opulent;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+    border: none;
+}
+
+#whiteButton {
+    background-color: white;
+    color: black;
+}
+
+header>h1 {
+    display: inline-block;
+}
+
+header>h2 {
+    display: inline-block;
+    margin-bottom: 0px;
+}
+
+header sup {
+    margin-left: 10px;
+    font-family: Opulent;
+    color: gray;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #C95959;
+}
+
+header span {
+    margin-left: 15px;
+    font-family: Univers;
+    color: gray;
+}
+
+label {
+    font-family: Univers;
+    margin-right: 15px;
+}
+
+#sort, #glaze {
+    height: 50px;
+    width: 250px;
+    padding: 15px;
+}
+
+#quantity {
+    height: 50px;
+    width: 75px;
+    padding: 15px;
+}
+
+.product-card a {
+    text-decoration: none;
+}
+
+.instagram-single a {
+    color: black;
+    text-decoration: none;
+}
+
+.product-card a:hover {
+    color: gray;
+}
+
+.instagram-single a:hover {
+    color: gray;
+}
+
+a:visited {
+    color: black;
+}
+
+.image-carousel span {
+    font-family: Univers;
+    font-size: 14px;
+    margin: 0px 15px;
+}
+
+/*Nav*/
+
+.nav {
+    position: absolute;
+    margin: 0 auto;
+    z-index: 1;
+    top: 70px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    margin: auto;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin: left;
+}
+
+.nav-links-black {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin: left;
+}
+
+.nav-links a {
+    font-family: Opulent;
+    color: white;
+    text-transform: lowercase;
+    text-decoration: none;
+}
+
+.nav-links a:not(:last-child):hover {
+    border-bottom: 2px solid white;
+    padding-bottom: 3px;
+}
+
+.nav-links-black a {
+    font-family: Opulent;
+    color: black;
+    text-transform: lowercase;
+    text-decoration: none;
+}
+
+.nav-links-black a:not(:last-child):hover {
+    border-bottom: 2px solid black;
+    padding-bottom: 3px;
+}
+
+/*Hero*/
+
+.hero {
+    height: 800px;
+    padding: 0px;
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 40%), linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.4) 15%, rgba(0, 0, 0, 0) 100%), url(/Images/hero-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-type {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+#hero-copy {
+    font-family: Opulent;
+    font-size: 72px;
+}
+
+/* Flexbox */
+
+.modules {
+    /* border: 1px solid #f76707; */
+    width: 80vw;
+    margin: 0 auto;
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.modules div {
+    flex: 500px;
+    /* border: 1px solid black; */
+    padding: 35px;
+}
+
+.shop-header {
+    width: 80vw;
+    margin: 0 auto;
+    margin-top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.products {
+    max-width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.product-card {
+    padding: 30px 0px;
+}
+
+.product-card img {
+    width: 300px;
+}
+
+.product-thumb {
+    width: 50%;
+}
+
+.product-detail {
+    max-width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+
+.product-detail div {
+    max-width: 550px;
+    padding-right: 70px;
+}
+
+.product-detail img {
+    max-width: 550px;
+}
+
+.instagram-pictures {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+/* Non-Flexbox Divs */
+
+.module-content {
+    justify-content: center;
+}
+
+.social-section {
+    max-width: 80vw;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.instagram-single {
+    padding: 20px 20px 0px 0px;
+}
+
+/*Footer*/
+
+footer {
+    height: auto;
+    background-color: black;
+    color: white;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    margin: auto;
+    padding: 20px 0px;
+}
+
+.socials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100px;
+    margin: left;
+    align-items: center;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+}

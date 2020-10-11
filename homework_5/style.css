@@ -7,17 +7,17 @@ body {
 
 @font-face {
     font-family: Opulent;
-    src: url(/Font/Opulent/OPN.TTF);
+    src: url(Font/Opulent/OPN.TTF);
 }
 
 @font-face {
     font-family: Univers;
-    src: url(/Font/Univers\ Std/UniversLTStd.otf);
+    src: url(Font/Univers\ Std/UniversLTStd.otf);
 }
 
 @font-face {
     font-family: Univers;
-    src: url(/Font/Univers\ Std/UniversLTStd-Bold.otf);
+    src: url(Font/Univers\ Std/UniversLTStd-Bold.otf);
     font-weight: bold;
 }
 
@@ -215,7 +215,7 @@ a:visited {
 .hero {
     height: 800px;
     padding: 0px;
-    background-image: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 40%), linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.4) 15%, rgba(0, 0, 0, 0) 100%), url(/Images/hero-image.jpg);
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 40%), linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.4) 15%, rgba(0, 0, 0, 0) 100%), url(Images/hero-image.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;

@@ -131,6 +131,10 @@ label {
     text-decoration: none;
 }
 
+.product-card a:visited {
+    color: black;
+}
+
 .instagram-single a {
     color: black;
     text-decoration: none;

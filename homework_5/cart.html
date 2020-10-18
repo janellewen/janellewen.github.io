@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>BUN BUN</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="nav">
+            <div class="nav-wrapper">
+                <a href="index.html"><img src="Icons/bunbun-black.png" width="180px" alt="Bun Bun logo"></a>
+                <div class="nav-links-black">
+                    <a href="order.html" class="nav-type"><b>Order</b></a>
+                    <a href="" class="nav-type">Location</a>
+                    <a href="" class="nav-type">About</a>
+                    <a href="cart.html"><img src="Icons/cart-black.png" width="24px"></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="cart">
+            <div class="cart-info">
+                <h1>Cart</h1>
+                <hr class="solid">
+                <div class="cart-info-details">
+                    <div><img src="Images/bun-1.jpg" alt="Cinnamon roll on a plate." class="cart-image"></div>
+                    <div class="cart-info-text">
+                        <div class="cart-info-title">
+                            <h2>The Original</h2>
+                            <p><a href="">remove</a></p>
+                        </div>
+                        <select name="glaze" id="glaze">
+                            <option value="none">None</option>
+                            <option value="sugar-milk">Sugar-milk</option>
+                            <option value="vanilla-milk">Vanilla-milk</option>
+                            <option value="double-chocolate">Double-chocolate</option>
+                        </select>
+
+                        <select name="quantity" id="quantity">
+                            <option value="1">1</option>
+                            <option value="3">3</option>
+                            <option value="6">6</option>
+                            <option value="12">12</option>
+                        </select><br>
+
+                        <p>3 buns x $2.50 = <b>$7.50</b></p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="cart-summary">
+                <div class="order-summary">
+                    <h2>Order Summary</h2>
+                    <div id="summary-subtotal">
+                        <p>Subtotal</p>
+                        <p>$7.50</p>
+                    </div>
+                    <div id="summary-shipping">
+                        <p>Shipping</p>
+                        <p>$0 (pickup)</p>
+                    </div>
+                    <div id="summary-total">
+                        <p>Total</p>
+                        <p><b>$7.50</b></p>
+                    </div>
+                </div>
+                <button id="checkout-button">CONTINUE TO CHECKOUT</button>
+                <p><a href="">add promo code</a></p>
+            </div>
+            <div id="spacer"></div>
+        </div>
+
+
+
+        <footer id="footer-bottom">
+            <div class="footer-content">
+                <div class="contact">
+                    <h4>Come by and say hi</h4>
+                    <p>501 N Neville St<br>
+                        Pittsburgh, PA 15213</p>
+                    <p>412 – 555 – 5555</p>
+                </div>
+                <div class="socials">
+                    <img src="Icons/twitter.png" class="social-icon" alt="twitter icon"><img src="Icons/facebook.png"
+                        class="social-icon" alt="facebook icon"><img src="Icons/instagram.png" class="social-icon"
+                        alt="instagram icon">
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>

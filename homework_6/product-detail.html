@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <title>BUN BUN</title>
     <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="main.js"></script>
 </head>
 
 <body>
@@ -16,11 +17,13 @@
                     <a href="order.html" class="nav-type"><b>Order</b></a>
                     <a href="" class="nav-type">Location</a>
                     <a href="" class="nav-type">About</a>
-                    <a href="cart.html"><img src="Icons/cart-black.png" width="24px"></a>
+                    <div class="cartLink">
+                        <a href="cart.html"><img src="Icons/cart-black.png" width="24px"></a>
+                        <div id="cartCount">0</div>
+                    </div>
                 </div>
             </div>
         </div>
-
 
         <div class="product-detail">
             <div class="image-carousel">
@@ -32,21 +35,27 @@
                 <h3>$2.50 each bun</h3>
                 <p>Sweet, rich, delectable. The original is a classic cinnamon roll, perfectly baked to doughy
                     perfection.</p>
+
+                <!--Type of glaze-->
                 <div id="top-labels">Choose Glaze <span id="asterisk">*</span></div>
-                <select name="glaze" id="glaze">
+                <select name="glaze" id="bunGlaze">
                     <option value="none">None</option>
                     <option value="sugar-milk">Sugar-milk</option>
                     <option value="vanilla-milk">Vanilla-milk</option>
                     <option value="double-chocolate">Double-chocolate</option>
                 </select>
+
+                <!--Quantity-->
                 <div id="top-labels">Choose Quantity <span id="asterisk">*</span></div>
-                <select name="quantity" id="quantity">
+                <select name="quantity" id="bunQuantity">
                     <option value="1">1</option>
                     <option value="3">3</option>
                     <option value="6">6</option>
                     <option value="12">12</option>
                 </select><br><br>
-                <button>ADD TO CART</button>
+
+                <!--Add to Cart Button-->
+                <button class="add-to-cart" onclick="addToCart()">ADD TO CART</button>
             </div>
         </div>
 
@@ -91,7 +100,8 @@
                 </div>
                 <div class="socials">
                     <img src="Icons/twitter.png" class="social-icon" alt="twitter icon"><img src="Icons/facebook.png"
-                        class="social-icon" alt="facebook icon"><img src="Icons/instagram.png" class="social-icon" alt="instagram icon">
+                        class="social-icon" alt="facebook icon"><img src="Icons/instagram.png" class="social-icon"
+                        alt="instagram icon">
                 </div>
             </div>
         </footer>

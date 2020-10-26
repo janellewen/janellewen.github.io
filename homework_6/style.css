@@ -55,6 +55,21 @@ p {
     font-family: Univers;
 }
 
+.cartLink {
+    position: relative;
+    text-align: center;
+}
+
+#cartCount {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 9px;
+    font-family: Univers;
+    font-weight: bold;
+}
+
 #top-labels {
     font-family: Univers;
     font-size: 14px;
@@ -115,13 +130,13 @@ label {
     margin-right: 15px;
 }
 
-#sort, #glaze {
+#sort, #bunGlaze {
     height: 50px;
     width: 250px;
     padding: 15px;
 }
 
-#quantity {
+#bunQuantity {
     height: 50px;
     width: 75px;
     padding: 15px;
@@ -309,12 +324,12 @@ hr.solid {
 }
 
 .product-detail div {
-    max-width: 550px;
+    max-width: 450px;
     padding-right: 70px;
 }
 
 .product-detail img {
-    max-width: 550px;
+    max-width: 450px;
 }
 
 .instagram-pictures {
@@ -399,7 +414,6 @@ footer {
     margin: 0 auto;
     margin-top: 70px;
 }
-
 
 .footer-content {
     display: flex;

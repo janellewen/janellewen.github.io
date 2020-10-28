@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <title>BUN BUN</title>
     <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="cart.js"></script>
 </head>
 
 <body>
@@ -40,14 +41,14 @@
                             <option value="double-chocolate">Double-chocolate</option>
                         </select>
 
-                        <select name="quantity" id="bunQuantity">
+                        <select name="quantity" id="bunQuantity" onchange="updateQty()">
                             <option value="1">1</option>
                             <option value="3">3</option>
                             <option value="6">6</option>
                             <option value="12">12</option>
                         </select><br>
 
-                        <p>3 buns x $2.50 = <b>$7.50</b></p>
+                        <p><span id="qty">3</span> buns x $2.50 = <b><span id="subtotal">$7.50</span></b></p>
                     </div>
                 </div>
             </div>

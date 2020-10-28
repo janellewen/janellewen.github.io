@@ -26,8 +26,8 @@
         </div>
 
         <div class="product-detail">
-            <div class="image-carousel">
-                <img src="Images/bun-1.jpg" alt="A bun on a plate."><br><br>
+            <div id="image-carousel">
+                <img src="Images/bun-1.jpg" alt="A bun on a plate." id="imageToChange"><br><br>
                 <center><img src="Icons/arrow-left.png"><span>1 / 4</span><img src="Icons/arrow-right.png"></center>
             </div>
             <div>
@@ -38,11 +38,11 @@
 
                 <!--Type of glaze-->
                 <div id="top-labels">Choose Glaze <span id="asterisk">*</span></div>
-                <select name="glaze" id="bunGlaze">
+                <select id="bunGlaze" onchange="imageChange()">
                     <option value="none">None</option>
-                    <option value="sugar-milk">Sugar-milk</option>
-                    <option value="vanilla-milk">Vanilla-milk</option>
-                    <option value="double-chocolate">Double-chocolate</option>
+                    <option value="sugarMilk">Sugar-milk</option>
+                    <option value="vanillaMilk">Vanilla-milk</option>
+                    <option value="doubleChocolate">Double-chocolate</option>
                 </select>
 
                 <!--Quantity-->

@@ -13,13 +13,13 @@ class Bun {
 
 function addToCart() {
 
-    var glaze = document.getElementById('bunGlaze').value
+    let glaze = document.getElementById('bunGlaze').value
 
-    var quantity = document.getElementById('bunQuantity').value
-    var quantityCount = parseInt(quantity)
+    let quantity = document.getElementById('bunQuantity').value
+    let quantityCount = parseInt(quantity)
 
-    for(var i = 0; i < quantityCount; i ++) {
-        var bun = new Bun(glaze, quantity)
+    for(let i = 0; i < quantityCount; i ++) {
+        let bun = new Bun(glaze, quantity)
         productArr.push(bun)
     }
 
@@ -30,8 +30,25 @@ function addToCart() {
 }
 
 function updateCartNumber(num) {
-    var cartCount = document.getElementById('cartCount')
+    let cartCount = document.getElementById('cartCount')
     cartCount.innerHTML = num
 
 }
 
+function imageChange() {
+    let img2Change = document.getElementById('imageToChange');
+    let val = document.getElementById("bunGlaze").value;
+
+    if (val == "none") {
+        img2Change.src = "Images/Dropdown/none.jpg";
+    } 
+    else if (val == "sugarMilk") {
+        img2Change.src = "Images/Dropdown/sugar-milk.jpg";
+    }
+    else if (val == "vanillaMilk") {
+        img2Change.src = "Images/Dropdown/vanilla-milk.jpg";
+    } 
+    else if (val == "doubleChocolate") {
+        img2Change.src = "Images/Dropdown/double-chocolate.jpg";
+    } 
+}

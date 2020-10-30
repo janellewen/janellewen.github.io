@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>BUN BUN</title>
     <link href="style.css" rel="stylesheet" type="text/css">
-    <script src="cart.js"></script>
+    <script src="main.js" defer></script>
 </head>
 
 <body>
@@ -17,7 +17,10 @@
                     <a href="order.html" class="nav-type"><b>Order</b></a>
                     <a href="" class="nav-type">Location</a>
                     <a href="" class="nav-type">About</a>
-                    <a href="cart.html"><img src="Icons/cart-black.png" width="24px"></a>
+                    <div class="cartLink">
+                        <a href="cart.html"><img src="Icons/cart-black.png" width="24px"></a>
+                        <div id="cartCount">0</div>
+                    </div>
                 </div>
             </div>
         </div>

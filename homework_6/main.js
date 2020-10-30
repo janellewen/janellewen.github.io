@@ -71,7 +71,7 @@ function updateSubtotal(val) {
     document.getElementById("subtotal").innerHTML = "$" + (Math.round(val * 2.5 * 100) / 100).toFixed(2);
 }
 
-//Create Local Storage
+//Create Local Storage (Check to see if local storage is empty)
 
 // const addToLocalStorage = item => {
 //     if (!window.localStorage.cart) {
@@ -92,7 +92,7 @@ function onLoad() {
     }
 }
 
-// On page load
+// On page load (load item count for cart)
 
 onLoad()
 

@@ -70,14 +70,14 @@ p {
     font-weight: bold;
 }
 
-#top-labels {
+.top-labels {
     font-family: Univers;
     font-size: 14px;
     font-weight: bold;
     padding: 20px 0px 8px 0px;
 }
 
-#asterisk {
+.asterisk {
     color: red;
 }
 
@@ -147,6 +147,11 @@ label {
     object-fit: cover;
 }
 
+.addToCart {
+    display: block;
+    margin-top: 30px;
+}
+
 .product-card a {
     text-decoration: none;
 }
@@ -176,6 +181,13 @@ a:visited {
     font-family: Univers;
     font-size: 14px;
     margin: 0px 15px;
+}
+
+#carousel-controls {
+    margin-top: 20px;
+    padding-right: 0px;
+    display: flex;
+    justify-content: center;
 }
 
 hr.solid {
@@ -212,14 +224,12 @@ hr.solid {
     display: flex;
     justify-content: space-between;
     width: 300px;
-    margin: left;
 }
 
 .nav-links-black {
     display: flex;
     justify-content: space-between;
     width: 300px;
-    margin: left;
 }
 
 .nav-links a {
@@ -433,7 +443,6 @@ footer {
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100px;
-    margin: left;
     align-items: center;
 }
 

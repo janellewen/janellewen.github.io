@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
@@ -12,13 +12,13 @@
     <div class="main">
         <div class="nav">
             <div class="nav-wrapper">
-                <a href="index.html"><img src="Icons/bunbun-black.png" width="180px" alt="Bun Bun logo"></a>
+                <a href="index.html"><img src="Icons/bunbun-black.png" width="180" alt="Bun Bun logo"></a>
                 <div class="nav-links-black">
                     <a href="order.html" class="nav-type"><b>Order</b></a>
                     <a href="" class="nav-type">Location</a>
                     <a href="" class="nav-type">About</a>
                     <div class="cartLink">
-                        <a href="cart.html"><img src="Icons/cart-black.png" width="24px"></a>
+                        <a href="cart.html"><img src="Icons/cart-black.png" width="24" alt="Cart icon"></a>
                         <div id="cartCount">0</div>
                     </div>
                 </div>
@@ -27,17 +27,17 @@
 
         <div class="product-detail">
             <div id="image-carousel">
-                <img src="Images/bun-1.jpg" alt="A bun on a plate." id="imageToChange"><br><br>
-                <center><img src="Icons/arrow-left.png"><span>1 / 4</span><img src="Icons/arrow-right.png"></center>
+                <img src="Images/bun-1.jpg" alt="A bun on a plate." id="imageToChange">
+                <div id="carousel-controls"><img src="Icons/arrow-left.png" alt="Left arrow"><span>1 / 4</span><img src="Icons/arrow-right.png" alt="Right arrow"></div>
             </div>
-            <div>
+            <div class="product-type">
                 <h1>The Original</h1>
                 <h3>$2.50 each bun</h3>
                 <p>Sweet, rich, delectable. The original is a classic cinnamon roll, perfectly baked to doughy
                     perfection.</p>
 
                 <!--Type of glaze-->
-                <div id="top-labels">Choose Glaze <span id="asterisk">*</span></div>
+                <div class="top-labels">Choose Glaze <span class="asterisk">*</span></div>
                 <select id="bunGlaze" onchange="imageChange()">
                     <option value="none">None</option>
                     <option value="sugarMilk">Sugar-milk</option>
@@ -46,16 +46,16 @@
                 </select>
 
                 <!--Quantity-->
-                <div id="top-labels">Choose Quantity <span id="asterisk">*</span></div>
+                <div class="top-labels">Choose Quantity <span class="asterisk">*</span></div>
                 <select name="quantity" id="bunQuantity">
                     <option value="1">1</option>
                     <option value="3">3</option>
                     <option value="6">6</option>
                     <option value="12">12</option>
-                </select><br><br>
+                </select>
 
                 <!--Add to Cart Button-->
-                <button class="add-to-cart" onclick="addToCart()">ADD TO CART</button>
+                <button class="addToCart" onclick="addToCart()">ADD TO CART</button>
             </div>
         </div>
 
@@ -64,25 +64,25 @@
             <div class="instagram-pictures">
                 <div class="instagram-single">
                     <a href="https://www.instagram.com">
-                        <img src="Images/social-1.jpg">
+                        <img src="Images/social-1.jpg" alt="Girl eating a cinnamon roll">
                         <p>@foodie_amy</p>
                     </a>
                 </div>
                 <div class="instagram-single">
                     <a href="https://www.instagram.com">
-                        <img src="Images/social-2.jpg">
+                        <img src="Images/social-2.jpg" alt="Two girls eating cinnamon roll at a picnic">
                         <p>@toast__</p>
                     </a>
                 </div>
                 <div class="instagram-single">
                     <a href="https://www.instagram.com">
-                        <img src="Images/social-3.jpg">
+                        <img src="Images/social-3.jpg" alt="Plate of cinnamon rolls with ice cream">
                         <p>@tryguys</p>
                     </a>
                 </div>
                 <div class="instagram-single">
                     <a href="https://www.instagram.com">
-                        <img src="Images/social-4.jpg">
+                        <img src="Images/social-4.jpg" alt="Toddler eating a cinnamon roll">
                         <p>@mom_and_littlefoodie</p>
                     </a>
                 </div>

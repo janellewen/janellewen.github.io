@@ -202,6 +202,11 @@ hr.solid {
     width: 100%;
 }
 
+.removeButton {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 /*Nav*/
 
 .nav {
@@ -368,7 +373,7 @@ hr.solid {
     margin-right: 30px;
 }
 
-.cart-info-details {
+.cartInfoDetails {
     display: flex;
     margin-top: 50px;
 }

@@ -1,3 +1,5 @@
+// Array of product objects
+
 let productArr = []
 
 //Product Class for Buns
@@ -19,23 +21,27 @@ function addToCart() {
     let quantity = document.getElementById('bunQuantity').value
     let quantityCount = parseInt(quantity)
 
-    for (let i = 0; i < quantityCount; i++) {
+    // for (let i = 0; i < quantityCount; i++) {
         let bun = new Bun(glaze, quantity)
         productArr.push(bun)
-    }
+    // }
 
     console.log(productArr)
     alert('Batch added to cart!')
 
-    updateCartNumber(productArr.length)
-
     //Add Array to Local Storage
     window.localStorage.cart = JSON.stringify(productArr);
+    updateCartNumber()
 }
 
-function updateCartNumber(num) {
+function updateCartNumber() {
+    let currentCart = JSON.parse(localStorage.getItem("cart"))
+    let sum = 0;
+    for(let i = 0; i < currentCart.length; i++) {
+        sum += parseInt(currentCart[i].quantity)
+    }
     let cartCount = document.getElementById('cartCount')
-    cartCount.innerHTML = num
+    cartCount.innerHTML = sum
 
 }
 
@@ -67,8 +73,13 @@ function updateQty() {
     updateSubtotal(val)
 }
 
+function calculateSubtotal(val) {
+    let subT = (Math.round(val * 2.5 * 100) / 100).toFixed(2)
+    return subT
+}
+
 function updateSubtotal(val) {
-    document.getElementById("subtotal").innerHTML = "$" + (Math.round(val * 2.5 * 100) / 100).toFixed(2);
+    document.getElementById("subtotal").innerHTML = "$" + calculateSubtotal(val);
 }
 
 //Create Local Storage (Check to see if local storage is empty)
@@ -88,9 +99,191 @@ function updateSubtotal(val) {
 function onLoad() {
     if (window.localStorage.cart) {
         const cart = JSON.parse(window.localStorage.cart);
-        updateCartNumber(cart.length);
+        updateCartNumber();
     }
 }
+
+
+// // Go to the Cart Page — NEW
+
+// function goToCart() {
+//     localStorage.setItem('bunOrder', JSON.stringify(productArr))
+//     window.location.replace('cart.html')
+// }
+
+// // Load Cart Page — NEW
+
+// function cartPageLoaded() {
+//     let loadedProductArr = localStorage.getItem('bunOrder')
+//     let productArrConverted = JSON.parse(loadedProductArr)
+//     console.log(productArrConverted)
+
+//     let cartInfoDetails = document.getElementById('cartInfoDetails')
+
+//     for (let i = 0; 1 < productArrConverted.length; i++) {
+//         let product = productArrConverted[i]
+//         cartInfoDetails.innerHTML += ''
+//     }
+// }
+// }
+
+function updateTotals() {
+    let sub = document.getElementById("subtotal")
+    let tot = document.getElementById("total")
+    let cart = JSON.parse(localStorage.getItem("cart"))
+    let sum = 0
+    for(let i = 0; i < cart.length; i++) {
+        sum += parseInt(cart[i].quantity)
+    }
+    let subtotal = (Math.round(sum * 2.5 * 100) / 100)
+    sub.innerHTML = "$" + subtotal.toFixed(2)
+    tot.innerHTML = "$" + subtotal.toFixed(2)
+}
+
+
+
+
+function removeItemFromCart(div, cart) {
+    let newIndex;
+    let classNames = document.getElementById("items-container").getElementsByClassName("cartInfoDetails")
+    for(let i = 0; i < classNames.length; i++) {
+        if (classNames[i] == div) {
+            newIndex = i
+            break
+        }
+    }
+    div.remove();
+    cart.splice(newIndex, 1);
+
+    // update cart in local storage
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartNumber()
+
+    // update Totals
+    updateTotals()
+}
+
+function setThumbnailSrc(val) {
+    if (val == "none") {
+        return "Images/Dropdown/none.jpg";
+    }
+    else if (val == "sugarMilk") {
+        return "Images/Dropdown/sugar-milk.jpg";
+    }
+    else if (val == "vanillaMilk") {
+        return "Images/Dropdown/vanilla-milk.jpg";
+    }
+    else if (val == "doubleChocolate") {
+        return "Images/Dropdown/double-chocolate.jpg";
+    }
+}
+
+function getGlazeName(val) {
+    if (val == "none") {
+        return "None";
+    }
+    else if (val == "sugarMilk") {
+        return "Sugar Milk";
+    }
+    else if (val == "vanillaMilk") {
+        return "Vanilla Milk";
+    }
+    else if (val == "doubleChocolate") {
+        return "Double Chocolate";
+    }
+}
+
+function fillCart() {
+    let currentCart = JSON.parse(localStorage.getItem("cart"))
+    console.log("currentCart: ", currentCart)
+    if (!currentCart) {
+        currentCart = {}
+    }
+    for (let i = 0; i < currentCart.length; i++) {
+
+        let cartInfoDetailsDiv = document.createElement("div");
+        cartInfoDetailsDiv.setAttribute("class", "cartInfoDetails");
+
+        //Div Thumbnail Image
+        let bunThumbnailDiv = document.createElement("div");
+
+        //Image Creation
+        let bunThumbnail = document.createElement("img");
+        bunThumbnail.setAttribute("class", "cart-image");
+        bunThumbnail.src = setThumbnailSrc(currentCart[i].glaze);
+
+        bunThumbnailDiv.appendChild(bunThumbnail)
+
+        //Cart Info Text Div
+        let cartInfoTextDiv = document.createElement("div");
+        cartInfoTextDiv.setAttribute("class", "cart-info-text");
+
+        //Cart Info Title Div
+        let cartInfoTitleDiv = document.createElement("div");
+        cartInfoTitleDiv.setAttribute("class", "cart-info-title");
+
+        //p Remove
+        let pRemove = document.createElement("p");
+
+        //span Remove
+        let spanRemove = document.createElement("span");
+        spanRemove.innerHTML ="remove";
+        spanRemove.setAttribute("class", "removeButton")
+        spanRemove.onclick = ()=> {removeItemFromCart(cartInfoDetailsDiv, currentCart)};
+
+        pRemove.appendChild(spanRemove)
+        cartInfoTitleDiv.innerHTML = "<h2>The Original</h2>"
+        cartInfoTitleDiv.appendChild(pRemove)
+
+        //p GlazeType
+        let pGlazeType = document.createElement("p");
+
+        pGlazeType.innerHTML = getGlazeName(currentCart[i].glaze)
+
+        //p Quantity
+        let pQuantity = document.createElement("p");
+
+        //span Quantity
+        let spanQuantity = document.createElement("span");
+        spanQuantity.setAttribute("class", "qty");
+        spanQuantity.innerHTML = currentCart[i].quantity
+
+        //span Subtotal
+        let spanSubtotal = document.createElement("span");
+        spanSubtotal.setAttribute("class", "subtotal");
+        spanSubtotal.innerHTML = "$" + calculateSubtotal(currentCart[i].quantity)
+
+        //Bun equation for subtotal
+        pQuantity.innerHTML = spanQuantity.outerHTML + " buns x $2.50 = <b> " + spanSubtotal.outerHTML + "</b>"
+
+        cartInfoTextDiv.appendChild(cartInfoTitleDiv)
+        cartInfoTextDiv.appendChild(pGlazeType)
+        cartInfoTextDiv.appendChild(pQuantity)
+
+        cartInfoDetailsDiv.appendChild(bunThumbnailDiv)
+        cartInfoDetailsDiv.appendChild(cartInfoTextDiv)
+
+        let container = document.getElementById("items-container")
+        container.appendChild(cartInfoDetailsDiv)
+
+    }
+    updateTotals()
+}
+
+/* <div class="cartInfoDetails">
+<div><img src="Images/bun-1.jpg" alt="Cinnamon roll on a plate." class="cart-image"></div>
+<div class="cart-info-text">
+    <div class="cart-info-title">
+        <h2>The Original</h2>
+        <p><span>remove</span></p>
+    </div>
+    <p>[Glaze Type Here]</p>
+
+    <p><span class="qty">3</span> buns x $2.50 = <b><span class="subtotal">$7.50</span></b></p>
+</div>
+</div> */
+
+
 
 // On page load (load item count for cart)
 

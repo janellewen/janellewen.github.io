@@ -8,7 +8,7 @@
     <script src="main.js" defer></script>
 </head>
 
-<body>
+<body onload="fillCart()">
     <div class="main">
         <div class="nav">
             <div class="nav-wrapper">
@@ -30,19 +30,17 @@
             <div class="cart-info">
                 <h1>Cart</h1>
                 <hr class="solid">
-                <div class="cart-info-details">
+                <div id="items-container">
+
+                <!-- <div class="cartInfoDetails">
                     <div><img src="Images/bun-1.jpg" alt="Cinnamon roll on a plate." class="cart-image"></div>
                     <div class="cart-info-text">
                         <div class="cart-info-title">
                             <h2>The Original</h2>
                             <p><a href="">remove</a></p>
                         </div>
-                        <select name="glaze" id="bunGlaze">
-                            <option value="none">None</option>
-                            <option value="sugar-milk">Sugar-milk</option>
-                            <option value="vanilla-milk">Vanilla-milk</option>
-                            <option value="double-chocolate">Double-chocolate</option>
-                        </select>
+                        
+                        <p>[Glaze Type Here]</p>
 
                         <select name="quantity" id="bunQuantity" onchange="updateQty()">
                             <option value="1">1</option>
@@ -51,9 +49,12 @@
                             <option value="12">12</option>
                         </select><br>
 
-                        <p><span id="qty">3</span> buns x $2.50 = <b><span id="subtotal">$7.50</span></b></p>
+                        <p><span class="qty">3</span> buns x $2.50 = <b><span class="subtotal">$7.50</span></b></p>
                     </div>
-                </div>
+                </div> -->
+
+
+                </div> 
             </div>
 
 
@@ -62,7 +63,7 @@
                     <h2>Order Summary</h2>
                     <div id="summary-subtotal">
                         <p>Subtotal</p>
-                        <p>$7.50</p>
+                        <p id="subtotal">$7.50</p>
                     </div>
                     <div id="summary-shipping">
                         <p>Shipping</p>
@@ -70,7 +71,7 @@
                     </div>
                     <div id="summary-total">
                         <p>Total</p>
-                        <p><b>$7.50</b></p>
+                        <p id="total">$7.50</p>
                     </div>
                 </div>
                 <button id="checkout-button">CONTINUE TO CHECKOUT</button>

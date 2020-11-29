@@ -1,0 +1,89 @@
+/* Fonts */
+
+@font-face {
+    font-family: Apercu;
+    src: url("Font/Apercu/Apercu_Regular.otf");
+}
+
+@font-face {
+    font-family: Apercu;
+    src: url("Font/Apercu/Apercu_Bold.otf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Syncopate;
+    src: url("Font/Syncopate/Syncopate-Regular.ttf");
+}
+
+/* Grid */
+
+.col-lg-8 {
+    background-color: rgb(128, 0, 255);
+}
+.col-lg-6 {
+    background-color: red;
+}
+.col-lg-3 {
+    background-color: pink;
+}
+
+/* Font Styles */
+
+p {
+    font-family: Apercu;
+    font-size: 18px;
+    margin-bottom: 3px;
+}
+
+h1 {
+    font-family: Syncopate;
+    font-size: 36px; 
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: Apercu;
+    font-size: 24px;
+    font-weight: bold; 
+}
+
+h3 {
+    font-family: Syncopate;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-family: Apercu;
+    font-size: 16px; 
+}
+
+a:visited {
+    color: black;
+}
+
+/* Nav */
+
+.nav-link {
+    font-family: Syncopate;
+    text-transform: uppercase;
+}
+
+.nav-link-2 {
+    font-family: Apercu;
+    font-style: bold;
+}
+
+/* Images */
+
+.full-width-image {
+    width: 100%;
+}
+
+
+/* Other */
+
+.bottom-spacer {
+    height: 150px;
+}

@@ -1,3 +1,19 @@
+/* Grid (for building)*/
+
+/* .col-lg-8 {
+    background-color: rgb(128, 0, 255);
+}
+.col-lg-6 {
+    background-color: red;
+}
+.col-lg-3 {
+    background-color: pink;
+}
+
+.mt-5 {
+    background-color: tan;
+} */
+
 /* Fonts */
 
 @font-face {
@@ -15,18 +31,6 @@
     font-family: Syncopate;
     src: url("Font/Syncopate/Syncopate-Regular.ttf");
 }
-
-/* Grid */
-
-/* .col-lg-8 {
-    background-color: rgb(128, 0, 255);
-}
-.col-lg-6 {
-    background-color: red;
-}
-.col-lg-3 {
-    background-color: pink;
-} */
 
 /* Font Styles */
 
@@ -63,6 +67,7 @@ li {
     font-family: Apercu;
 }
 
+
 a:visited {
     color: black;
 }
@@ -70,6 +75,15 @@ a:visited {
 .portfolio-pages a:hover {
     text-decoration: none;
 }
+
+.page-link a:visited {
+    color: black;
+}
+
+.page-link a:hover {
+    color: black;
+}
+
 
 /* Nav */
 
@@ -81,6 +95,12 @@ a:visited {
 .nav-link-2 {
     font-family: Apercu;
     font-style: bold;
+    color: black;
+}
+
+.nav-link-2:hover {
+    text-decoration: none;
+    color: rgb(53, 53, 53);
 }
 
 /* Images */
@@ -88,27 +108,6 @@ a:visited {
 body {
     background: linear-gradient(161.38deg, #ECFF9F 7.73%, #A8FFE5 38.63%, #FFFFFF 68.91%);
 }
-
-/* body {
-    background: linear-gradient(161.38deg, #ECFF9F 7.73%, #A8FFE5 38.63%, #FFFFFF 68.91%);
-    cursor: none;
-        
-    .cursor {
-      pointer-events: none;
-      
-      &__ball {
-        position: fixed;
-        top: 0;
-        left: 0;
-        mix-blend-mode: difference;
-        z-index: 1000;
-        
-        circle {
-          fill: #f7f8fa;
-        }
-      }      
-    } 
-  } */
 
 
 .full-width-image {
@@ -137,26 +136,74 @@ a:hover .hover-index-image {
     color: orange;
 }
 
-/* Other */
+/* Spacer */
 
 .spacer {
     height: 150px;
 }
 
-/* Stylus */
-
-body .cursor {
-    pointer-events: none;
+.spacer-2 {
+    height: 50px;
 }
 
-body .cursor__ball {
+/* Scroll Indicator */
+
+.progress-container {
+    width: 100%;
+    height: 4px;
+    background: #ccc;
     position: fixed;
     top: 0;
-    left: 0;
-    mix-blend-mode: difference;
-    z-index: 1000;
+    z-index: 1;
 }
 
-body .cursor__ball circle {
-    fill: #8886ff;
+.progress-bar {
+    height: 4px;
+    background: orange;
+    width: 0%;
+}
+
+/* Back to Top */
+
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Typed JS */
+/*Add custom cursor so it auto inherits font styles*/
+.typed::after {
+	content: '|';
+	display: inline;
+	-webkit-animation: blink 0.7s infinite;
+	-moz-animation: blink 0.7s infinite;
+	animation: blink 0.7s infinite;
+}
+
+/*Removes cursor that comes with typed.js*/
+.typed-cursor{
+   opacity: 0;
+	display: none;
+}
+/*Custom cursor animation*/
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }

@@ -6,55 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>janelle</title>
 
+    <!-- JS -->
+    <script defer src="../Assets/main.js"></script>
+
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
+    <!-- jquery -->
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <!-- UIkit CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.10/dist/css/uikit.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.10/dist/css/uikit.min.css" /> -->
 
     <!-- UIkit JS -->
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.10/dist/js/uikit.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.10/dist/js/uikit-icons.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.10/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.10/dist/js/uikit-icons.min.js"></script> -->
 
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="../Assets/style.css" type="text/css">
 
-    <!-- JS -->
-    <script src="main.js"></script>
-
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
 
 
 </head>
 
-<body id="body-dashboard">
+<body>
+
+    <!-- Scroll Indicator -->
+    <span class="progress-container">
+        <span class="progress-bar" id="myBar"></span>
+    </span>
 
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent" id="nav">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="index.html">Index</a>
+                <a class="nav-link" href="../index.html">Index</a>
             </li>
         </ul>
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link-2" href="#">janelle wen</a>
+                <a class="nav-link-2" href="../index.html">janelle wen</a>
             </li>
         </ul>
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="info.html">Info</a>
+                <a class="nav-link" href="../Page_Info/info.html">Info</a>
             </li>
         </ul>
     </nav>
 
 
     <div class="container">
+
         <!-- Hero Image -->
         <div class="row mt-3">
-            <img src="Images/Dashboard/spokeo-dashboard-hero.png" class="full-width-image"
-                alt="Spokeo Dashboard Screen">
+            <img src="./Images/spokeo-dashboard-hero.png" class="full-width-image" alt="Spokeo Dashboard Screen">
         </div>
+
+        <!-- Spacer 2-->
+        <div class="spacer-2"></div>
 
         <!-- Header Section -->
         <div class="row mt-5">
@@ -67,6 +80,9 @@
                     Protection.</p>
             </div>
         </div>
+
+        <!-- Spacer 2-->
+        <div class="spacer-2"></div>
 
         <!-- Header Details -->
         <div class="row mt-5">
@@ -84,6 +100,9 @@
             </div>
         </div>
 
+        <!-- Spacer 2-->
+        <div class="spacer-2"></div>
+
         <!-- Section: Challenge -->
         <div class="row mt-5">
             <div class="col-lg-3">
@@ -94,8 +113,15 @@
                 <p>Spokeo was crippled by the “search paradox”—that is, users conducted one search and cancelled their
                     subscription shortly after. How could Spokeo increase the visibility of their various services and
                     increase retention of their subscribers?</p>
+                <div class="mt-5">
+                    <img src="./Images/spokeo-dashboard-graph.png" class="full-width-image"
+                        alt="Graph of declining subscriptions.">
+                </div>
             </div>
         </div>
+
+        <!-- Spacer 2-->
+        <div class="spacer-2"></div>
 
         <!-- Section: Project Goals -->
         <div class="row mt-5">
@@ -110,6 +136,9 @@
                 <p>— Introduce Identity Protection</p>
             </div>
         </div>
+
+        <!-- Spacer 2-->
+        <div class="spacer-2"></div>
 
         <!-- Section: Preliminary Research -->
         <div class="row mt-5">
@@ -126,6 +155,9 @@
             </div>
         </div>
 
+        <!-- Spacer 2-->
+        <div class="spacer-2"></div>
+
         <!-- Section: Ideation -->
         <div class="row mt-5">
             <div class="col-lg-3">
@@ -136,11 +168,14 @@
                     opportunity in our existing services to possibly integrate the following concepts: Online
                     Reputation, Identity Protection, Sex Offender Information, Credit Report, Dark Web Education.</p>
                 <div class="mt-5">
-                    <img src="Images/Dashboard/spokeo-dashboard-workshop.png" class="full-width-image"
+                    <img src="./Images/spokeo-dashboard-workshop.png" class="full-width-image"
                         alt="Ideation workshop with posters and post-it notes">
                 </div>
             </div>
         </div>
+
+        <!-- Spacer 2-->
+        <div class="spacer-2"></div>
 
         <!-- Section: Dashboard -->
         <div class="row mt-5">
@@ -151,22 +186,46 @@
                 <p>Users are prompted to try new search types, reflect on previous search history, and activate Identity
                     Protection.</p>
                 <div class="mt-5">
-                    <img src="Images/Dashboard/spokeo-dashboard-mockup.png" class="full-width-image"
-                        alt="Spokeo dashboard screen">
+                    <img src="./Images/spokeo-dashboard-mockup.png" class="full-width-image"
+                        alt="Spokeo dashboard mockup">
                 </div>
             </div>
         </div>
 
-        <ul class="uk-pagination">
-            <li><a href="#"><span class="uk-margin-small-right" uk-pagination-previous></span> Previous Project</a></li>
-            <li class="uk-margin-auto-left"><a href="#">Next Project<span class="uk-margin-small-left" uk-pagination-next></span></a></li>
-        </ul>
+
+        <!-- Previous and Next -->
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true"> <svg width="1em" height="1em"
+                            viewBox="0 0 16 16" class="bi bi-chevron-left" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                        </svg> Previous Project</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="../Project_Iris/iris.html">Next Project <svg width="1em" height="1em"
+                            viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                        </svg></a>
+                </li>
+            </ul>
+        </nav>
     </div>
 
-    
+    <!-- Scroll to Top -->
+    <a href="#nav" class="btn transparent btn-lg back-to-top"><svg width="1em" height="1em" viewBox="0 0 16 16"
+            class="bi bi-chevron-compact-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+                d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z" />
+        </svg></a>
 
     </div>
 
+    <!-- Spacer -->
     <div class="spacer"></div>
 
 </body>

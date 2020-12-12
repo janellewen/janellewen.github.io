@@ -7,7 +7,6 @@
     <title>janelle</title>
 
     <!-- JS -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
     <script defer src="Assets/main.js"></script>
 
     <!-- Bootstrap -->
@@ -17,14 +16,17 @@
     <!-- CSS -->
     <link rel="stylesheet" href="Assets/style.css" type="text/css">
 
-    <!--jquery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
     <!-- Scroll Reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <!-- Typed JS -->
-    <script src="Assets/typed.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
+
+    <!--Unused-->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script> -->
 
 </head>
 
@@ -52,11 +54,11 @@
 
 
     <div class="container">
-
+        <div class="spacer"></div>
         <!-- Hero Image -->
         <div class="row">
             <div class="col-lg-8 col-md-8 col-12" id="me">
-                <h1>janelle wen is a <span class="typed"></span></h1>
+                <h1>janelle wen is a </br> <span class="typed"></span></h1>
             </div>
         </div>
         <div class="portfolio-pages">
@@ -65,7 +67,8 @@
                     <p>Spokeo</p>
                     <h1><a href="Project_Dashboard/dashboard.html">
                             <div class="hover-index-image">Dashboard
-                                <span><img src="Assets/Images/1.jpg" alt="Dashboard image"></span></div>
+                                <span><img src="Assets/Images/1.jpg" alt="Dashboard image"></span>
+                            </div>
                         </a></h1>
                 </div>
                 <div class="col-12 mt-5 mb-5">
@@ -152,7 +155,6 @@
 
 
 <!-- Sources:
-Mouse cursor: https://codepen.io/clementGir/pen/RQqvQx
 *Image hover: https://jsfiddle.net/b5Lvq7yL/
 Image hover: http://jsfiddle.net/HJf8q/2/
 *Scroll Indicator: https://www.w3schools.com/howto/howto_js_scroll_indicator.asp
